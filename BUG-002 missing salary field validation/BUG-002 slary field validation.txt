@@ -1,39 +1,40 @@
-Jobilis v1.0 1stPass UI [Feature]: Skills not visible due to keyboard overlap
+Jobilis v1.0 1stPass UI [Feature]: Salary Field Input Validation Missing
 
 [Summary]
+ The expected salary input field allows users to enter excessively large numeric values (e.g., 999999999999), as there is no enforced input limit or validation. This may result in unrealistic job posts, UI distortion, and backend data issues.
 
 [Precondition]
  Software version: Jobilis v1.o
  Software configuration: Default Settings, light theme
- Hardware specifications: Android smartphone with soft keyboard
- Network configuration: Any, not depended on network for this feature
+ Hardware specifications: Android smartphone
+ Network configuration: Online/Offline scenarios tested
 
 [Steps to reproduce]
  1. Launch the Jobilis app
  2. Log in the user credntials
  3. Navigate to profile in the bottom navigation bar
  4. Click the `Post a Job` tab in the  `Job Post Management`
- 5. Tap the `Skills` input field
- 6. Begin typing skills (e.g., `Java`)
- 7. Observe the screen without scrolling manually
+ 5. Locate the `Salary` input field.
+ 6. Enter an excessively large numeric value (e.g., 999999999999999).
+ 7. Review the posted data and UI rendering.
 
 [Actual results]
- The dropdown containing skill suggestions is rendered behind the on-screen keyboard and is not visible until the user scrolls the screen manually.
+ The app accepts the very large number without warning or restriction. The salary value appears unrealistic and affects data quality and UI formatting.
 
 [Expected results]
- The dropdown should automatically adjust and become visible above the keyboard when typing, without requiring user-initiated scrolling.
+ The app should restrict input to a reasonable numeric range (e.g., 1 to 1,000,000) and provide error or warning popup for extreme values to avoid large values.
 
 [Additional information]
  A screenshot of the affected interface has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
 
 [Is this Breakage?]
- No, this is part of a new implementation
- 
+ No, new implementation
+
 [Previous code tested]
  MC.010.003
  
 [Severity: How does this problem impact the customer/user?]
- 6. Severe GUI, usability, and accessibility issue
+ 6. Usability, and accessibility issue
  
 [Likelihood: How often will a customer/user use this feature/function?]
  6. Moderate
