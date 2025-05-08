@@ -1,0 +1,48 @@
+Jobilis v1.0 1stPass UI [Feature]: Unlimited title length
+
+[Summary]
+
+[Precondition]
+ Software version: Jobilis v1.o
+ Software configuration: Default Settings, light theme
+ Hardware specifications: Android smartphone with soft keyboard
+ Network configuration: Any, not depended on network for this feature
+
+[Steps to reproduce]
+ 1. Launch the Jobilis app
+ 2. Log in the user credentials
+ 3. Navigate to profile in the bottom navigation bar
+ 4. Click the `Post a Job` tab in the  `Job Post Management`
+ 5. Tap the `Title` input field
+ 6. Begin typing long text in the textbox
+ 7. Click submit and observe that input is accepted
+
+[Actual results]
+ The posted job displayed a too long title distorting the UI in a post
+
+[Expected results]
+ The title should display concise summary of the job description, not covering the description itself.
+
+[Additional information]
+ A screenshot of the affected interface has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
+
+[Is this Breakage?]
+ No, this is part of a new implementation
+ 
+[Previous code tested]
+ MC.010.003
+ 
+[Severity: How does this problem impact the customer/user?]
+ 2. Cosmetic issue
+ 
+[Likelihood: How often will a customer/user use this feature/function?]
+ 6. Moderate
+
+[Repeatability: Is this problem easily reproducible?]
+ 10. 100% Reproducible
+
+[Impacted Test Cases]
+ POS-001
+
+[Impact Sizing (in days)]
+ Less than a day
