@@ -1,0 +1,49 @@
+Jobilis v1.0 1stPass UI [Feature]: Placeholder responsiveness for difference screens
+
+[Summary]
+ When the textfield is active the placeholder in some screen will overlap with the border of the textfield.
+
+[Precondition]
+ Software version: Jobilis v1.o
+ Software configuration: Default Settings, light theme
+ Hardware specifications: Screen Size
+ Network configuration: Online/Offline scenarios tested
+
+[Steps to reproduce]
+ 1. Launch the Jobilis app
+ 2. Log in the user credntials
+ 3. Navigate to profile in the bottom navigation bar
+ 4. Click the `Post a Job` tab in the  `Job Post Management`
+ 5. Click on any of the existing textfield
+ 6. Observe the behavior of the placeholder text
+ 7. Check of if the placeholder text is overlapping
+
+[Actual results]
+ For certain size of the screen the placeholder text field appears to overlap with the border making it hard to read the text.
+
+[Expected results]
+ The app should adjust the paddding in certain screen for the placeholder text to appear correctly, it should not overlap with ther border of the textfield to maintain readibility all throughout.
+
+[Additional information]
+ A screenshot of the affected interface has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
+
+[Is this Breakage?]
+ No, new implementation
+
+[Previous code tested]
+ MC.010.003
+ 
+[Severity: How does this problem impact the customer/user?]
+ 6. Readability and Navigation
+ 
+[Likelihood: How often will a customer/user use this feature/function?]
+ 6. Very often since all of the text field for the `Job Post` are involved and it is one of the main feature that user will use often.
+
+[Repeatability: Is this problem easily reproducible?]
+ 10. 100% Reproducible
+
+[Impacted Test Cases]
+   POS-0001, POS-0002
+
+[Impact Sizing (in days)]
+ Less than a day
