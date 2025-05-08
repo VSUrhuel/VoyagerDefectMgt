@@ -1,0 +1,48 @@
+Jobilis v1.0 1stPass UI [Feature]: Skills not visible due to keyboard overlap
+
+[Summary]
+
+[Precondition]
+ Software version: Jobilis v1.o
+ Software configuration: Default Settings, light theme
+ Hardware specifications: Android smartphone with soft keyboard
+ Network configuration: Any, not depended on network for this feature
+
+[Steps to reproduce]
+ 1. Launch the Jobilis app
+ 2. Log in the user credntials
+ 3. Navigate to profile in the bottom navigation bar
+ 4. Click the `Post a Job` tab in the  `Job Post Management`
+ 5. Tap the `Skills` input field
+ 6. Begin typing skills (e.g., `Java`)
+ 7. Observe the screen without scrolling manually
+
+[Actual results]
+ The dropdown containing skill suggestions is rendered behind the on-screen keyboard and is not visible until the user scrolls the screen manually.
+
+[Expected results]
+ The dropdown should automatically adjust and become visible above the keyboard when typing, without requiring user-initiated scrolling.
+
+[Additional information]
+ A screenshot of the affected interface has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
+
+[Is this Breakage?]
+ No, this is part of a new implementation
+ 
+[Previous code tested]
+ N/A
+ 
+[Severity: How does this problem impact the customer/user?]
+ 6. Severe GUI, usability, and accessibility issue
+ 
+[Likelihood: How often will a customer/user use this feature/function?]
+ 6. Moderate
+
+[Repeatability: Is this problem easily reproducible?]
+ 10. 100% Reproducible
+
+[Impacted Test Cases]
+ POS-001
+
+[Impact Sizing (in days)]
+ Less than a day
