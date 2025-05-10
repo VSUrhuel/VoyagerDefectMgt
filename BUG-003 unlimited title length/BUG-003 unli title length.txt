@@ -42,7 +42,7 @@ Jobilis v1.0 1stPass UI [Feature]: Unlimited title length
  10. 100% Reproducible
 
 [Impacted Test Cases]
- POS-001
+ POS-003
 
 [Impact Sizing (in days)]
  Less than a day
