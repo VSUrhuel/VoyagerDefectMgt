@@ -1,0 +1,49 @@
+Jobilis v1.0 1stPass UI [Feature]: Salary input erase crash
+[Summary]
+ When the initial salary input is erased totally without using the `x` button, the app crashes.
+
+[Precondition]
+ Software version: Jobilis v1.o
+ Software configuration: Default Settings, light theme
+ Hardware specifications: Screen Size
+ Network configuration: Online/Offline scenarios tested
+
+[Steps to reproduce]
+ 1. Launch the Jobilis app
+ 2. Log in the user credntials
+ 3. Navigate to profile in the bottom navigation bar
+ 4. Click the `Manage Jobs` tab in the  `Job Post Management`
+ 5. Click edit on any of the existing job posts
+ 6. Click on the `Salary` textfield
+ 7. Manually erase totally the initial salary input 
+ 8. Observe the behavior of the app upon deletion of the last digit input
+
+[Actual results]
+ The app crashes when the last digit of the salary input is erased manually.
+
+[Expected results]
+ The app should accept or allow total editing of the salary input without crashing. The app should not crash when the last digit of the salary input is erased manually.
+
+[Additional information]
+ A screenshot of the affected interface has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
+
+[Is this Breakage?]
+ No, new implementation
+
+[Previous code tested]
+ MC.010.003
+ 
+[Severity: How does this problem impact the customer/user?]
+ 6. Crash or hang cleared by restart
+ 
+[Likelihood: How often will a customer/user use this feature/function?]
+ 6. Moderate
+
+[Repeatability: Is this problem easily reproducible?]
+ 10. 100% Reproducible
+
+[Impacted Test Cases]
+   MANP-0001
+
+[Impact Sizing (in days)]
+ Less than a day
