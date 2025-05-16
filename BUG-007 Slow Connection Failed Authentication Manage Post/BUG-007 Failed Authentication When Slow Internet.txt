@@ -1,0 +1,46 @@
+Jobilis v1.0 1stPass UI [Feature]: Failed Authentication When Slow Internet
+[Summary]
+ When slow internet is experience it will not proceed to authentication and user is required to re-enter credential to be able to log back in.
+
+[Precondition]
+ Software version: Jobilis v1.0
+ Software configuration: Default Settings, light theme
+ Hardware specifications: Screen Size
+ Network configuration: Online Scenario Tested
+
+[Steps to reproduce]
+ 1. First is to make sure that the user has a history of using the application with an actually accounted already existing.
+ 2. Relaunch the Jobillis app
+ 3. Make sure you have a slow internet when opening the application.
+ 4. If you are back at the loging page despite having already signed in once, then observe the behavior of the app.
+ 
+
+[Actual results]
+ The app does not redirect to the homepage and goes back to the login screen for authentication despite having an existing session.
+
+[Expected results]
+ There should be a UI screen to say if the internet is flactuating or weak and not redirect back to the login page.
+
+[Additional information]
+ A screenshot of the outcome has been attached for reference. No runtime logs were captured, as the QA team was provided only with an APK build. Additionally, the app is developed using Visual Studio with C# and MAUI, which requires specific configuration settings to enable logging or debug access.
+
+[Is this Breakage?]
+ No, new implementation
+
+[Previous code tested]
+ MC.010.003
+ 
+[Severity: How does this problem impact the customer/user?]
+ 6. It affects the customer in a way that every weak internet experience it will make the user log back their credential over and over again.
+ 
+[Likelihood: How often will a customer/user use this feature/function?]
+ 8. All of the time as each session with the application requires user to authenticate.
+
+[Repeatability: Is this problem easily reproducible?]
+ 10. 50% reproducible
+
+[Impacted Test Cases]
+   MANP-0003
+
+[Impact Sizing (in days)]
+ Less than a day
